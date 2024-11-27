@@ -1,0 +1,4 @@
+<p>Zakres losowania: od 1 do {{ max }}</p>
+<p>Wylosowana liczba: {{ randomNumber }}</p>
+<p [ngStyle]="{'color': randomNumber <= 0.5 * max ? 'green' : 'red'}">{{ comment }}</p>
+<button (click)="generateRandomNumber()">Wygeneruj nową liczbę</button>

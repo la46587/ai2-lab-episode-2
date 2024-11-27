@@ -1,0 +1,13 @@
+<!-- Pole edycyjne i przycisk do dodawania -->
+<div>
+  <input [(ngModel)]="newItem" placeholder="Wpisz tekst" />
+  <button (click)="addItem()">Dodaj</button>
+</div>
+
+<!-- Lista elementów -->
+<ul>
+  <li *ngFor="let item of items; let i = index">
+    {{ item }}
+    <a href="#" (click)="removeItem(i)">usuń</a>
+  </li>
+</ul>
