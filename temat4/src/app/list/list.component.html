@@ -1,0 +1,10 @@
+<h2>List of people</h2>
+<ul>
+  <li *ngFor="let person of persons; let i = index">
+    <a [routerLink]="['/details', i]" style="text-decoration: none; color: inherit;">
+      {{ person.firstName }} {{ person.familyName }} ({{ person.age }} lat)
+    </a>
+    <button (click)="removePerson(i)">Delete</button>
+  </li>
+</ul>
+<button routerLink="/add">Add a new person</button>

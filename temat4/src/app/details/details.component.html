@@ -1,0 +1,14 @@
+<h2>Person details</h2>
+<div *ngIf="person">
+  <p><strong>Name:</strong> {{ person.firstName }}</p>
+  <p><strong>Surname:</strong> {{ person.familyName }}</p>
+  <p><strong>Age:</strong> {{ person.age }} lat</p>
+  <h3>Address</h3>
+  <p><strong>City:</strong> {{ person.address.city }}</p>
+  <p><strong>Street:</strong> {{ person.address.street }}</p>
+  <p><strong>Postal code:</strong> {{ person.address.postCode }}</p>
+</div>
+<div *ngIf="!person">
+  <p>No data found for this person.</p>
+</div>
+<a routerLink="/">Return to the list</a>

@@ -1,0 +1,23 @@
+<h2>Add a new person</h2>
+<form>
+  <label for="firstName">Name:</label>
+  <input id="firstName" [(ngModel)]="person.firstName" name="firstName"><br>
+
+  <label for="familyName">Surname:</label>
+  <input id="familyName" [(ngModel)]="person.familyName" name="familyName"><br>
+
+  <label for="age">Age:</label>
+  <input id="age" [(ngModel)]="person.age" name="age" type="number"><br>
+
+  <h3>Adres:</h3>
+  <label for="city">City:</label>
+  <input id="city" [(ngModel)]="person.address.city" name="city"><br>
+
+  <label for="street">Street:</label>
+  <input id="street" [(ngModel)]="person.address.street" name="street"><br>
+
+  <label for="postCode">Postal code:</label>
+  <input id="postCode" [(ngModel)]="person.address.postCode" name="postCode"><br>
+
+  <button type="button" (click)="save()">Save</button>
+</form>
